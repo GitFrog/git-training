@@ -18,14 +18,16 @@ Version control (or source-control) is the practise of tracking changes to files
 Ideally, we want to don't want to find ourselves in these kind of situations, **especially with code**:
 
 
-<kbd><img src="assets/00_bad_file_mgmt.png" alt="A picture of multiple files with bad file names, with the awkward look monkey puppet meme as background." width="600"/></kbd>
+<kbd>
 
-![]()
+![A picture of multiple files with bad file names, with the awkward look monkey puppet meme as background.](assets/00_bad_file_mgmt.png =600x)
+
+</kbd>
 
 ## What is Git?
 
 [In their own words](https://git-scm.com/):
-> <img src="assets/01_git_logo.png" alt="The git logo" width="75"/><br> Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+> ![The git logo](assets/01_git_logo.png =75x)<br> Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 > 
 
 Git is one of many version control softwares, but is one of the [most popular](https://rhodecode.com/insights/version-control-systems-2016#:~:text=To%20sum%20this%20up%3A,Mozilla%2C%20Nginx%2C%20and%20NetBeans.).
