@@ -41,10 +41,18 @@ But really, Git helps us to:
 4. Collaborate with others on the same codebase
 5. Provides tools to integrate changes (in a somewhat) systematic way
 
-Here's a quick example of how git integrates into our workflow:
+Here's a quick example of how git integrates into our workflow. Think of each bubble as a "save-point" :
+1. We start a new project with our program area partners
+2. Soon after, we finish work on a fairly involved script to get us the data to create a report.
+3. After some hard work, we've created the initial report with most of the features requested. But our deadline is approaching, and we need to share it with our program partners.
+4. We share the initial report (V1.0.0) with our partners for their initial feedback.
+5. In the meantime, we start work on a backlogged feature as review continues.
+6. We end up finishing the feature, and we're able to incorporate the feature into another realease (V.1.1.0).
+
 
 ![A git workflow](assets/02_version_control.gif =1000x)
 
+Bonus! This whole course was version-controlled from Day-1; You could walk back to see how it looked if you so choose!
 
 ## What is Github/Azure DevOps?
 **Git =/= Github!**
