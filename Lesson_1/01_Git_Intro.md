@@ -1,4 +1,6 @@
-# Lesson 1: Git Basics
+# Lesson 1: Git Intro + Install
+
+[[_TOC_]]
 
 ## Learning Objectives
 
@@ -42,11 +44,35 @@ But really, Git helps us to:
 Here's a quick example of how git integrates into our workflow:
 
 ![A git workflow](assets/02_version_control.gif =1000x)
+![A git workflow](assets/02_version_control.gif ) remove
 
 
 ## What is Github/Azure DevOps?
+**Git =/= Github!**
+
+You can use git's version control capabilities without ever having to understand Github.
+
+Github is a service that holds git repositories. There are many companies  that offer hosting for git repositories, such as [BitBucket](https://bitbucket.org/product), [GitLab](https://about.gitlab.com/), [SourceForge](https://sourceforge.net/) etc.  As they are hosted on the www, they make it easier to collaborate with others on the same codebase. 
+
+[Azure DevOps](https://azure.microsoft.com/en-us/services/devops/) also provides git hosting capabilities as part of its Dev Ops services. This is what we will use.
 
 ## Installation Instructions
+
+
+### Git
+Download [git for Windows from here (standalone installer)](https://git-scm.com/download/win). You might need admin privileges to install git. 
+
+Additionally, since you're most likely using a Windows-based machine, you will need to set some defaults. During install, set the following defaults (click for pics):
+
++ [Use Git from Git Bash only](assets/03_git_install.png)
++ [Use the OpenSSL Library](assets/04_git_install.png)
++ [Checkout Windows-style, commit Unix-style line endings](assets/05_git_install.png)
++ [Use MinTTYP (the default terminal of MSYS2)](assets/06_git_install.jpg)
+
+
+### Azure DevOps
+
+<mark>TODO: Setup SSL from git; Tokens setup</mark>
 
 ## References
 
