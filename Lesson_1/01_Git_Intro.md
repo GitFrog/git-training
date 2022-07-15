@@ -17,7 +17,7 @@ Version control (or source-control) is the practise of tracking changes to files
 + <mark>TODO: [add a few more]</mark>
 
 
-Ideally, we want to don't want to find ourselves in these kind of situations, **especially with code**:
+Ideally, we don't want to find ourselves in these kind of situations, **especially with code**:
 
 
 <kbd>
@@ -44,7 +44,6 @@ But really, Git helps us to:
 Here's a quick example of how git integrates into our workflow:
 
 ![A git workflow](assets/02_version_control.gif =1000x)
-![A git workflow](assets/02_version_control.gif ) remove
 
 
 ## What is Github/Azure DevOps?
