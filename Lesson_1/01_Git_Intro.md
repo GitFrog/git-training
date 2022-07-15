@@ -34,10 +34,14 @@ Git is one of many version control softwares, but is one of the [most popular](h
 
 But really, Git helps us to:
 1. Track changes across multiple files
-2. Develop simulataneously multiple versions of a project
+2. Develop multiple versions of a project simultaneously
 3. Explore the state of a project at some arbitrary point in the past
 4. Collaborate with others on the same codebase
 5. Provides tools to integrate changes (in a somewhat) systematic way
+
+Here's a quick example of how git integrates into our workflow:
+
+![A git workflow](assets/02_version_control.gif)
 
 
 ## What is Github/Azure DevOps?
