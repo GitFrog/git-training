@@ -41,7 +41,7 @@ But really, Git helps us to:
 
 Here's a quick example of how git integrates into our workflow:
 
-![A git workflow](assets/02_version_control.gif)
+![A git workflow](assets/02_version_control.gif =500x)
 
 
 ## What is Github/Azure DevOps?
