@@ -77,6 +77,7 @@ Additionally, since you're most likely using a Windows-based machine, you will n
 + [Use MinTTYP (the default terminal of MSYS2)](assets/06_git_install.jpg)
 
 <mark>Setting up default text-editor</mark>
+<mark>How to quit git log</mark>
 
 
 ### Azure DevOps
