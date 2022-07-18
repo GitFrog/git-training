@@ -22,8 +22,6 @@ The basic workflow is:
 
 ### A contrived example
 
-<details>
-
 I have been working on a new data visualization. In my work folder, there are three files:
 
 1.  **viz_script.R** : A file that creates the visualization
@@ -37,7 +35,14 @@ I have been working on a new data visualization. In my work folder, there are th
 
 ![Example of git](assets/02_git_steps.jpg =1000x)
 
-At 9AM, I did two changes on the viz, and 1 within the ppt. Later on, I changed the chart type on the viz, and then changed all passive voice in the ppt to active voice.
+At 9AM, I did two changes on the viz (change bg colour, and update the data), and 1 within the ppt (update the data figures). 
 
+Later on in the day (11AM), I continue work on the visualization (change chart type) and finally, finish updating the ppt (change passive to active voice). This is shown in changes to the "Working Directory.
 
-</details>
+I now decide to "package" the changes. I grab all the changes related to the Viz to go first (Stage 1). I do a final do over, and determine the changes are ready to be written to the official project history. I add a **commit message**: "Updated visualization to staging".  Once this process is done, I have officially contributed to the project's history! 
+
+Proceed in a similar fashion for "Commit 2".
+
+### Working, Staging, Committing
+
+![git workflow commands](assets/03_git_workflow2.jpg)
