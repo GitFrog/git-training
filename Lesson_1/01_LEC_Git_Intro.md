@@ -75,10 +75,15 @@ Additionally, since you're most likely using a Windows-based machine, you will n
 + [Use the OpenSSL Library](assets/04_git_install.png)
 + [Checkout Windows-style, commit Unix-style line endings](assets/05_git_install.png)
 + [Use MinTTYP (the default terminal of MSYS2)](assets/06_git_install.jpg)
++ [Change default text editor for git](assets/07_git_install.png)
++ [Install Git Credential Manager](assets/08_git_install.png)
++ [Change default repository name in git](assets/09_git_install.png)
 
-<mark>Setting up default text-editor</mark>
-<mark>How to quit git log</mark>
+#### Opening Git
 
+We will primarily use the command line interface (CLI). If the installed was successful, git bash should open, and it looks like this:
+
+![A blank git bash session](assets/10_git_bash.png)
 
 ### Azure DevOps
 
