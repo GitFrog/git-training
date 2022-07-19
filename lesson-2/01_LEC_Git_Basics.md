@@ -1,5 +1,12 @@
 # Lesson 2: Git Basics
 
+[_TOC_]
+
+## Learning Objectives
+1. Understand at a conceptual level a typical git workflow
+2. Understand the differences between unstaged changes, staged changes, and committed changes.
+3. Understand the use case for `git init`, `git add`, and `git commit`.
+
 ## Conceptual Overview
 
 + A git repository (AKA repo) is an "area" that git (the software) tracks changes to files and folders happening within. Git keeps a running history of changes happening to files: changes as minor as the addition of a simple blank space in a sentence. 
@@ -35,14 +42,26 @@ I have been working on a new data visualization. In my work folder, there are th
 
 ![Example of git](assets/02_git_steps.jpg =1000x)
 
-At 9AM, I did two changes on the viz (change bg colour, and update the data), and 1 within the ppt (update the data figures). 
++ At 9AM, I did two changes on the viz (change bg colour, and update the data), and 1 within the ppt (update the data figures). 
 
-Later on in the day (11AM), I continue work on the visualization (change chart type) and finally, finish updating the ppt (change passive to active voice). This is shown in changes to the "Working Directory.
++ Later on in the day (11AM), I continue work on the visualization (change chart type) and finally, finish updating the ppt (change passive to active voice). This is shown in changes to the "Working Directory".
 
-I now decide to "package" the changes. I grab all the changes related to the Viz to go first (Stage 1). I do a final do over, and determine the changes are ready to be written to the official project history. I add a **commit message**: "Updated visualization to staging".  Once this process is done, I have officially contributed to the project's history! 
++ I now decide to "package" the changes. I grab all the changes related to the Viz to go first (Stage 1). I do a final do over, and determine the changes are ready to be written to the official project history. I add a **commit message**: "Updated visualization to staging".  Once this process is done, I have officially contributed to the project's history! 
 
-Proceed in a similar fashion for "Commit 2".
++ Proceed in a similar fashion for "Commit 2".
+
+### Initiating a git repository
+
+To create a git repository for a particular folder, we use [`git init`](https://git-scm.com/docs/git-init). 
+
+Navigate to the folder that needs to be source-controlled, then run `git init` in bash. If everything worked correctly, your work folder should have a new subfolder named .git (a hidden folder by default), and the address of your bash session should have been appended with "main":
+
+This .git folder is how git keeps track of version history. Be careful not to rename, or add contents to it directly as it may affect functionality.
+
+![initiating a git repo](assets/04_git_init.png)
+
 
 ### Working, Staging, Committing
 
 ![git workflow commands](assets/03_git_workflow2.jpg)
+
