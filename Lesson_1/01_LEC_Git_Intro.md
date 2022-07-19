@@ -85,6 +85,13 @@ We will primarily use the command line interface (CLI). If the installed was suc
 
 ![A blank git bash session](assets/10_git_bash.png)
 
+
+##### Why the CLI?
++ Get rid of the clutter that you don't need! 
++ Once about 10 commands are understood, it is much faster than using (pretty much any) GUI
++ GUIs are dependent on their maintainers
++ The commands are consistent be it on UNIX/UNIX-like/Windows machines
+
 ### Azure DevOps
 
 <mark>TODO: Setup SSL from git; Tokens setup</mark>
