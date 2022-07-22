@@ -7,8 +7,11 @@
 3. Do unix intro/navigation lab.
 	1. Copy: Shift-highlight
 	2. Paste: Shit-Insert
-4. Encourage on-the-fly practise
-5. Provide cheatsheet for unix commands.
+	3. Left-Right arrows; vs. Top-Bottom arrows
+	4. The use of Ctrl + left/right arrows to move past words
+	5. Why the `>` happens, and how to exit (Ctrl+C) 
+5. Encourage on-the-fly practise
+6. Provide cheatsheet for unix commands.
 
 
 ## File Manipulation/Navigation in Unix
