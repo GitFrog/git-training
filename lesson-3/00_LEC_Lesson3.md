@@ -57,7 +57,7 @@ Git uses a crytographic function (SHA-1) that guarantees the following:
 	+ Feeding "IAE" to SHA-1 returns `233ed065ce5a1aa80d3d930be6a8a5fd850963a3`	
 	+ Feeding "IAe" to SHA-1 returns `323a6905d656be822184e40067f82d26468376de`
 4. There should be no collisions: two inputs should not give the same output*
-5. Reverse-engineering the output to determine the input should not be possible (or very difficult)
+5. Reverse-engineering the output to determine the input should not be possible (or *exceedingly* difficult)
 
 *Note:* [SHA-1 has been broken (a collision has been discovered)](https://phys.org/news/2017-02-cwi-google-collision-industry-standard.html), but still has many applications nonetheless. SHA-256 is now experimental in Git.
 
@@ -93,7 +93,7 @@ In the animation below, the user's workspace is consistent with the tip of the b
 
 ![HEAD and attached state](assets/05_branch_head_anim.gif)
 
-If the user wanted to see the changes as part of another commit (say commit 2), they are able to "travel" to that commit. But since they're not in-sync with the latest commit on that branch, the user is said to be in **detached head** state.
+If the user wanted to see the changes as part of another commit (say commit 2), they are able to "travel" to that commit. But since they're no longer in-sync with the latest commit on that branch, the user is said to be in **detached head** state.
 
 
 ![HEAD and attached state](assets/06_detached_state_anim.gif)
