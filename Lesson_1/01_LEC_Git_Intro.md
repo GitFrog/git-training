@@ -83,7 +83,7 @@ Additionally, since you're most likely using a Windows-based machine, you will n
 
 We will primarily use the command line interface (CLI). If the installed was successful, git bash should open, and it looks like this:
 
-![A blank git bash session](assets/10_git_bash.png)
+![A blank git bash session](assets/10_git_bash.png =800x)
 
 
 ##### Why the CLI?
