@@ -23,7 +23,7 @@ Branches can be very helpful if:
 
 By now, we've seen the usual work-stage-commit workflow. Here's how a mature git repo might look:
 
-![A picture showing several git branches and merges](assets/00_git_branch.png)
+![A picture showing several git branches and merges](assets/00_git_branch.png =800x)
 
 In this picture, we have 5 branches:
 
@@ -69,7 +69,7 @@ For every commit, a hash is run creating a unique identifier for that "snapshot"
 2. The committer's name/email
 3. A reference to the previous commit (hash of the parent commit(s))
 
-![The internals of a git commit](assets/02_commit_elements.png)
+![The internals of a git commit](assets/02_commit_elements.png =800x)
 
 Every time we add a new commit, we "grow the chain". By linking commits together, git is able to traverse multiple commits and determine **how various commits are interrelated**.
 
