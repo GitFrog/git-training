@@ -32,7 +32,7 @@ More often than not, the `main` branch would have received commits by the time a
 
 Sometimes the new commit in `main` has no relation to the changes that were made in the branch. For example, say the branch has been modifying script1 whereas the main branch has been modifying its wiki. In this case, while there were changes made not reflected in the branch, there are no conflicts between the changes. In this case, the merge will happen automatically, and git will create a new commit called the **"merge commit"**. The merge commit is a "content-less" commit that just marks when two branches were merged into one.
 
-[insert an anim for 3-way merge v1]
+![A merge commit with no conflict shown](assets/02_3_way_merge_no_conflict.gif)
 
 Note that until the commit merge is committed, your console will read (MERGING). This can inform that a merge process is still ongoing.
 
@@ -51,7 +51,7 @@ On line 1 of the green-branch, this line exists
 
 ```
 
-This shows where the conflict occured. Git doesn't care which version is kept: the resolution could be keeping the source file, the incoming file, or even plain deleting everything, so long as the markings are removed from all the conflicting files.
+This shows where the conflict occured. **Git doesn't care which version is kept**: the resolution could be keeping the source file, the incoming file, a mix of the two, or even plain deleting everything, **so long as the markings are removed from all the conflicting files.** Once all of the conflict markers are removed, it tells Git that all conflicts have been addressed.
 
 Resolving merge conflicts is therefore purely user driven:
 
@@ -62,11 +62,14 @@ On [merge conflict resolution](https://git-scm.com/book/en/v2/Git-Tools-Advanced
 
 Once the correct version is determined, then it's a usual work-stage-commit workflow. The merged changes have their own commit.
 
+![A merge commit with conflict shown](assets/03_3_way_merge_conflict.gif)
+
+
 ## Merging commands
 
 ### Initiate a merge
 
-To initiate a merging process, switch to the branch being merged into, and execute `git merge <branch-name>`. Git will attempt a fast-forward by default. If not, it'll go into 3-way merge.
+To initiate a merging process, switch to the branch being merged into, and execute `git merge <branch-name>`. Git will attempt a fast-forward by default. If not, a 3-way merge is attempted.
 
 
 ### 
