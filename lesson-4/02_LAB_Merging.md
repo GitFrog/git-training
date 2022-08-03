@@ -40,20 +40,22 @@ cloves
 ```
 
 Q1. If merging branches, where would you expect a fast-forward merge to occur?
-a) `vegetables-heavy` onto `main`
-b) `vegetables-heavy` onto `more-spices`
-c) `more-spices` onto `main`
-d) a and b only
-e) b and c only
-f) a and c only 
+
++ `vegetables-heavy` onto `main`
++ `vegetables-heavy` onto `more-spices`
++ `more-spices` onto `main`
++ a and b only
++ b and c only
++ a and c only 
 
 Q2. If merging branches, where would you expect a merge commit to occur?
-a) `vegetables-heavy` onto `main`
-b) `vegetables-heavy` onto `more-spices` 
-c) `more-spices` onto `main`
-d) a and b only
-e) b and c only
-f) a and c only
+
++ `vegetables-heavy` onto `main`
++  `vegetables-heavy` onto `more-spices` 
++  `more-spices` onto `main`
++  a and b only
++  b and c only
++  a and c only
 
 
 7. You realise you forgot to add a key ingredient in the `main` branch's ingredient file. Circle back and commit in ingredients.txt:
@@ -63,20 +65,22 @@ beef stock
 ```
 
 Q3. If merging branches now, where would you expect a no-conflict merge(s) to occur?
-a) `vegetables-heavy` onto `main`
-b) `vegetables-heavy` onto `more-spices`
-c) `more-spices` onto `main`
-d) a and b only
-e) b and c only 
-f) a and c only
 
-Q2. If merging branches now, where would you expect a merge commit with conflict(s) to occur?
-a) `vegetables-heavy` onto `main`
-b) `vegetables-heavy` onto `more-spices`
-c) `more-spices` onto `main`
-d) a and b only
-e) b and c only
-f) a and c only
++ `vegetables-heavy` onto `main`
++  `vegetables-heavy` onto `more-spices`
++  `more-spices` onto `main`
++  a and b only
++  b and c only 
++  a and c only
+
+Q4. If merging branches now, where would you expect a merge commit with conflict(s) to occur?
+
++  `vegetables-heavy` onto `main`
++  `vegetables-heavy` onto `more-spices`
++  `more-spices` onto `main`
++  a and b only
++  b and c only
++  a and c only
 
 8. Merge  `more-spices` and resolve conflicts as necessary.
 9. Merge `vegetables-heavy` and resolve conflicts as necessary.
