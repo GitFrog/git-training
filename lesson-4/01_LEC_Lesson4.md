@@ -38,7 +38,7 @@ Note that until the commit merge is committed, your console will read (MERGING).
 
 ## 3-way merge (with conflict)
 
-In the case that a merge does involve the same files, git will identify all the files that are affected by conflicts.
+In the case that a merge does involve the same files being modified, git will identify all the files that are affected by conflicts. This is an important point: **files must have diverged (as in received conflicting commits across branches) to be considered in conflict**. If a file has been changed in only one of the branches, then git will not consider it a conflict, and changes will be fast-forwarded. 
 
 Within the conflicting files themselves, you will notice new entries, generally following this format:
 
