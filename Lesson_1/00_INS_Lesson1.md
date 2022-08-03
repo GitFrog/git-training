@@ -17,7 +17,7 @@
 ## File Manipulation/Navigation in Unix
 
 1. Open a git bash window
-2. Create directory/sub-directories for [Animals](https://rsscience.com/kingdom-animalia-classification/)
+2. Create directory/sub-directories for Geographies (shown below)
 	+ show `cd`, `..`, `ls`, `mkdir`, `touch`,  `start`, `.`
 3. Geographies:
   + World
