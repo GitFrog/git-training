@@ -1,4 +1,4 @@
-# Lesson 4: Finding differences
+# Lesson 5: Finding differences
 
 [[_TOC_]]
 
