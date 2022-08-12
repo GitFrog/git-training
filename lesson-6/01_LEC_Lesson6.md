@@ -31,7 +31,7 @@ Other users cannot "modify" your local repository but they may contribute to the
 
 ## Working with Remotes
 
-### Local 🠚 Remote Workflow
+### Local 🠚 Remote
 
 So far, we've been working in a "local" workflow. We have seen the **working directory**, **staging**, and **local repository** as three main work trees that git keeps track of. Think of remotes as yet another work tree that behaves in a (mostly) similar fashion.
 
@@ -47,7 +47,9 @@ Often, there will be changes that have been pushed to the remote that we don't h
 
 `git fetch` transfers changes from the remote and plops those changes into your local repository. By design `git fetch` will not attempt to reconcile changes with what's in your workspace. `git fetch` allows you to explore the remote changes in a more controlled manner.
 
-If, you wanted git to reconcile the changes, `git pull` will fetch, download, and immediately update the local repository to match the content on the remote.  
+If, you wanted git to reconcile the changes, `git pull` will fetch, download, and immediately update the local repository to match the content on the remote.  `git pull` attempts both a fetch and a merge in one go. Having uncommitted changes locally in the workspace may cause conflicts.
+
+
 
 
 ![Overview of git data transport commands](assets/01b_git_data_commands_two_way.png)
@@ -67,6 +69,16 @@ A repository may have multiple remote repositories set-up.
 To view a list of remotes set up with your current repository:
 
 `git remote -v`
+
+To view a list of branches available on the remote:
+
+`git remote -r` 
+
+## Downloading a remote branch
+
+By default, cloning a project will only copy over the main branch. To download a named branch from the remote:
+
+`git switch <remote-branch-name>`
 
 
 ### Cloning a remote
