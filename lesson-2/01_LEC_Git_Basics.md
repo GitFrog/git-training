@@ -2,14 +2,14 @@
 
 [[_TOC_]]
 
-## Learning Objectives
+## By the end of this module, you will be able to:
 1. Understand at a conceptual level a typical git workflow
 2. Understand the differences between unstaged changes, staged changes, and committed changes.
 3. Understand the use case for `git init`, `git add`, and `git commit`.
 
 ## Conceptual Overview
 
-+ A git repository (AKA repo) is an "area" that git (the software) tracks changes to files and folders happening within. Git keeps a running history of changes happening to files: changes as minor as the addition of a simple blank space in a sentence. 
++ A **git repository** (AKA repo) is an "area" that git (the software) tracks changes to files and folders happening within. Git keeps a running history of changes happening to files: changes as minor as the addition of a simple blank space in a sentence. 
 
 + Think of it as a very nosy neighbour/HOA keeping tabs on everything happening in your neighbourhood/repository - but *worse* they have all the evidence from the beginning of time, and can bring them up at any point.
 
@@ -54,9 +54,9 @@ Let's say I have been working on a new data visualization. In my work folder, th
 
 ![Example of git](assets/02_git_steps.jpg =1000x)
 
-+ At 9AM, I did two changes on the viz (change bg colour, and update the data), and 1 within the ppt (update the data figures). 
++ At 9AM, I did two changes on the viz (change bg colour, and update the data), and 1 within the PowerPoint (update the data figures). 
 
-+ Later on in the day (11AM), I continue work on the visualization (change chart type) and finally, finish updating the ppt (change passive to active voice). This is shown in changes to the "Working Directory".
++ Later on in the day (11AM), I continue working on the visualization (change chart type) and finally, finish updating the PowerPoint (change passive to active voice). This is shown in changes to the "Working Directory".
 
 + I now decide to "package" the changes. I grab all the changes related to the Viz to go first (Stage 1). I do a final do over, and determine the changes are ready to be written to the official project history. I add a **commit message**: "Updated visualization to staging".  Once this process is done, I have officially contributed to the project's history! 
 
