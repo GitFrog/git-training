@@ -2,7 +2,7 @@
 
 [[_TOC_]]
 
-## Learning Objectives
+## By the end of this module, you will be able to:
 
 1. Understand the use-case for version control, and git
 2. Distinguish between git and hosting services such as github or Azure DevOps
@@ -11,11 +11,10 @@
 ## Why version-control?
 
 Version control (or source-control) is the practise of tracking changes to files/code over time. There are many benefits to version-control:
+
 + The ability to roll-back changes if errors are found 
 + Revisit earlier versions of files
 + Distinguish between experimental code and code that has been released/is in production
-+ <mark>TODO: [add a few more]</mark>
-
 
 Ideally, we don't want to find ourselves in these kind of situations, **especially with code**:
 
@@ -34,7 +33,8 @@ Ideally, we don't want to find ourselves in these kind of situations, **especial
 
 Git is one of many version control softwares, but is one of the [most popular](https://rhodecode.com/insights/version-control-systems-2016#:~:text=To%20sum%20this%20up%3A,Mozilla%2C%20Nginx%2C%20and%20NetBeans.).
 
-But really, Git helps us to:
+Specifically, Git helps us to:
+
 1. Track changes across multiple files
 2. Develop multiple versions of a project simultaneously
 3. Explore the state of a project at some arbitrary point in the past
@@ -42,6 +42,7 @@ But really, Git helps us to:
 5. Provides tools to integrate changes (in a somewhat) systematic way
 
 Here's a quick example of how git integrates into our workflow. Think of each bubble as a "save-point" :
+
 1. We start a new project with our program area partners
 2. Soon after, we finish work on a fairly involved script to get us the data to create a report.
 3. After some hard work, we've created the initial report with most of the features requested. But our deadline is approaching, and we need to share it with our program partners.
@@ -59,7 +60,7 @@ Bonus! This whole course was version-controlled from Day-1; You could walk back 
 
 You can use git's version control capabilities without ever having to understand Github.
 
-Github is a service that holds git repositories. There are many companies  that offer hosting for git repositories, such as [BitBucket](https://bitbucket.org/product), [GitLab](https://about.gitlab.com/), [SourceForge](https://sourceforge.net/) etc.  As they are hosted on the www, they make it easier to collaborate with others on the same codebase. 
+Github is a service that holds git repositories. There are many companies  that offer hosting for git repositories, such as [BitBucket](https://bitbucket.org/product), [GitLab](https://about.gitlab.com/), [SourceForge](https://sourceforge.net/) etc.  As they are hosted on the Internet, these services make it easier to collaborate with others on the same codebase. 
 
 [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/) also provides git hosting capabilities as part of its Dev Ops services. This is what we will use.
 
@@ -81,7 +82,7 @@ Additionally, since you're most likely using a Windows-based machine, you will n
 
 #### Opening Git
 
-We will primarily use the command line interface (CLI). If the installed was successful, git bash should open, and it looks like this:
+In this course, we will primarily use the command line interface (CLI). If the installation was successful, open git bash. It should look like this:
 
 ![A blank git bash session](assets/10_git_bash.png =800x)
 
@@ -95,6 +96,3 @@ We will primarily use the command line interface (CLI). If the installed was suc
 ### Azure DevOps
 
 <mark>TODO: Setup SSL from git; Tokens setup</mark>
-
-## References
-
