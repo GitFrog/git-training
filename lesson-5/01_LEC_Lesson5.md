@@ -2,10 +2,10 @@
 
 [[_TOC_]]
 
-## Learning Objectives
+## By the end of this module, you will be able to:
 
-1. Understand the output of `git diff` and common options to it
-2. Understand the use-case for `git stash`
+1. Understand the output of `git diff` 
+2. Undertand how to compare changes that are unstaged, staged, and committed 
 
 
 ## Keeping track of changes
@@ -37,7 +37,7 @@ Run git diff --staged HEAD will compare the difference between what's been stage
 Here's a summary of the above:
 
 
-![Summary of git diff for common operations](assets/00_git_diff.png)
+![Summary of git diff for common operations](assets/00_git_diff.png =1000x)
 
 ## Interpreting the output from `git diff`
 
@@ -57,7 +57,7 @@ To simplify, assume we're comparing two versions of the same file, each with the
 
 If a git diff was run on this file, we can expect this kind of output:
 
-![A typical git diff output](assets/01_git_diff_output.png)
+![A typical git diff output](assets/01_git_diff_output.png =1000x)
 
 Here is an explanation of what the lines mean:
 
@@ -65,7 +65,7 @@ Here is an explanation of what the lines mean:
 	+ The line `diff --git a/fileA.txt b/fileA.txt` says that Git is comparing two versions of the same file, fileA.txt. Git will identify one of them as "a" and the other "b". This makes sense because in git diff, we're tracking changes to each file with another version of the same file.
 
 2. **Git internals/metadata**
-	+ The line `index <hash>..<hash> <6-digits>` refers to the two git objects it is comparing. This is not mission-critical to know, and is unlikely to be relevant at this point.
+	+ The line `index <hash>..<hash> <6-digits>` refers to the two git objects being compared. This is not mission-critical to know, and is unlikely to be relevant at this point.
 
 3. **File Markers/Identifiers**
 	+ Here Git clarifies how it's going to annotate changes coming from file "a" and "b"
