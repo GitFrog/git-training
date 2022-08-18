@@ -3,12 +3,12 @@
 
 [[_TOC_]]
 
-## Learning Objectives
+## By the end of this module, you will be able to:
 
-1. Understand the context for branching and its benefits
+1. Understand the rationale for branching workflows and their benefits
 2. Understand the basics of pointers in git (HEAD/detached HEAD, etc.)
-3. Understand the basics of `git branch`, `git switch`
-4. Be able to create, switch, and delete branches
+3. Understand the basics and use-cases of `git branch`, and `git switch`
+4. Create, switch, and delete branches
 
 ## What are branches/why are they needed?
 
@@ -107,13 +107,16 @@ Here we'll see the commands that help us create branches, switch between branche
 ### Create a branch
 To create a branch you use the **`git branch <branch-name>`** command with a particular branch-name.  It will create the branch at the location you are at. This command will only create the branch, but won't move you to that branch. 
 
-#### List all the branches in the repository
+### Delete a branch
+To delete a branch you use the -D flag: `git branch -D <branch-name>`. Careful: there is no undo to this command!
+
+### List all the branches in the repository
 Use `git branch -v` to list all the branches available on your local repository.
 
-#### Switching to a branch
+### Switch to a branch
 Use the `git switch <branch-name>` to move to a particular branch
 
-#### Switching to a commit
+### Switch to a commit
 Use `git checkout <hash>` command. To move to a particular commit (minimum of 7 out of 40 hash characters needed) . This will most certainly put you in detached head state.
  
  ----
