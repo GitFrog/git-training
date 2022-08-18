@@ -78,3 +78,8 @@ Often, API keys or passwords are inadvertently saved within scripts themselves. 
 ### 8. Do not commit data files into your repository.
 
 Create generating scripts that allow users to recreate the dataset locally if needed. Even better, point towards the table on the data-lake/server.
+
+
+### 9. If in doubt, don't push.
+
+Self-explanatory
