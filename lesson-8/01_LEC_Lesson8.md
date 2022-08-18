@@ -37,7 +37,7 @@ Azure DevOps provides multiple levels of hierarchy:
 
 Here's an example of how our ADP architecture might look like:
 
-![A hierarchy of ADP for IAE](assets/00_azure_devops_org.png)
+![A hierarchy of ADP for IAE](assets/00_azure_devops_org.png =1000x)
 
 ## IAE's DevOps philosophy
 
