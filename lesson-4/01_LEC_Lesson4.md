@@ -70,6 +70,3 @@ Once the correct version is determined, then it's a usual work-stage-commit work
 ### Initiate a merge
 
 To initiate a merging process, switch to the branch being merged into, and execute `git merge <branch-name>`. Git will attempt a fast-forward by default. Otherwise, a 3-way merge is attempted.
-
-
-### 
