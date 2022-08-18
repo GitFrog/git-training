@@ -4,7 +4,7 @@
 
 ## By the end of this module, you will be able to:
 1. understand when to use `git stash`.
-3. understand the differences and use-cases for `git restore`, `git reset` and `git revert`.
+3. understand the differences between, and use-cases for `git restore`, `git reset` and `git revert`.
 
 
 ## Stockpiling work - `git stash`
