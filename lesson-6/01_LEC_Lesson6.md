@@ -1,7 +1,7 @@
 # Lesson 6: Working with remotes
 [[_TOC_]]
 
-## Learning Objectives
+## By the end of this module, you will be able to:
 
 1. Understand `git push`, `git fetch`, `git pull`, and typical workflow with remote repos.
 
@@ -27,7 +27,7 @@ Remotes are versions of your project that are **stored elsewhere**. A remote can
 Other users cannot "modify" your local repository but they may contribute to the remote repository. This is how interaction with others happens.
 
 
-![Overview of remotes and locals](assets/00_local_remote_overview.png)
+![Overview of remotes and locals](assets/00_local_remote_overview.png =1000x)
 
 ## Working with Remotes
 
@@ -38,7 +38,7 @@ So far, we've been working in a "local" workflow. We have seen the **working dir
 To the **work-stage-commit** workflow, we add function `git push`. 
 As long as a remote has been set-up, `git push ` will copy over the changes from your local commit(s) onto the remote branch. We will cover `git push` more extensively below.
 
-![Overview of git data transport commands](assets/01_git_transport_commands_one_way.jpg)
+![Overview of git data transport commands](assets/01_git_transport_commands_one_way.jpg =1000x)
 
 
 ### Remote 🠚 Local
