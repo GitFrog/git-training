@@ -55,7 +55,7 @@ If you have staged a file by mistake and want to unstage that change, use `git r
 ![Animation showing a file being unstaged](assets/02_unstage_changes.gif)
 
 
-## Resetting
+### Resetting
 
 git reset is used when you have to take out commits from your local history. Think of `git reset` as a "rewind" function or a pointer resetting operation, not a deletion operation. Often those "resetted" commits are still accessible.
 
@@ -68,7 +68,7 @@ There are two common flags used with git reset, depending on what end-state to t
 
 ---
 
-`git reset <hash>` with no further flags will rewind the change, but not otherwise modify the working directory
+`git reset <hash>` with no further flags will rewind the change, but not otherwise modify the working directory. Running a `git status` would show `
 
 ![Animation showing a git reset](assets/03_git_reset.gif)
 
@@ -80,7 +80,7 @@ There are two common flags used with git reset, depending on what end-state to t
 ![Animation showing a git reset](assets/04_git_reset_hard.gif)
 
 
-## Reverting
+### Reverting
 
 With `git revert <hash>` errors that have been pushed and potentially pulled by others is more formally dealt with.  A new commit is created to say that a particular commit has been reversed. This is easier for collaborators to then pull and update their own repos.
 
