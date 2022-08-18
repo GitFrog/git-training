@@ -2,7 +2,7 @@
 
 [[_TOC_]]
 
-## Learning Objectives
+## By the end of this module, you will be able to:
 
 1. Understand common types of merges (fast-forward merge, 3-way merges with or without conflicts)
 2. Understand how to resolve conflicts
@@ -69,7 +69,7 @@ Once the correct version is determined, then it's a usual work-stage-commit work
 
 ### Initiate a merge
 
-To initiate a merging process, switch to the branch being merged into, and execute `git merge <branch-name>`. Git will attempt a fast-forward by default. If not, a 3-way merge is attempted.
+To initiate a merging process, switch to the branch being merged into, and execute `git merge <branch-name>`. Git will attempt a fast-forward by default. Otherwise, a 3-way merge is attempted.
 
 
 ### 
