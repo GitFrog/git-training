@@ -112,7 +112,7 @@ jgs  /'-- --'\
 11. Within the main branch, commit the following:
 
 ```work                    
-             		   //////
+             		      //////
                       | o o|
                       ( c  )                    ____
                        \= /                    ||   \_
