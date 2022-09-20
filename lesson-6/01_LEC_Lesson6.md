@@ -4,6 +4,7 @@
 ## By the end of this module, you will be able to:
 
 1. Understand `git push`, `git fetch`, `git pull`, and typical workflow with remote repos.
+2. Understand how to set-up your own Github/Azure DevOps account. 
 
 
 ## Introduction
@@ -140,3 +141,30 @@ In this example, we have two users: Jack and Jill. They are both working on a da
 + Jack resumes work on his local. Before starting he `git pull` changes from the remote to ensure his local is up-to-date.
 
 ![Analyst pulling updating remote](assets/08_step6_remote.gif)
+
+
+## Working with Github
+
+### Setting up your Github account
+
++ First, navigate to [Github](https://github.com/). Registering for an account will require a username and a password.
++ Next, you will need to set-up Secure Shell (SSH) keys to allow your PC to interact with Github, without having to input a username/personal access token everytime. Otherwise, you can setup a Personal Access Token (PAT).
+
+
+### Pushing an existing repo to Github
+
+If you have an existing repo that is local on your terminal that you want to move to Github, the steps to get your repo remotely are:
+
+1. Create an empty repository on Github
+2. Add in the remote link (github path) to your local repository.
+3. Push the repository up on Github 
+
+### Cloning a repo
+
+If you have a repo (or want to grab an open-source one) that is already on Github, you can "clone" the repo onto your local machine.
+
+1. Identify the repository that you want to clone, and copy its address
+2. Use `git clone <address>` to clone the repo based on where your terminal's working directory is.
+3. By default, `git clone` will clone only the `main` branch. To copy over a specific branch, you can use  `git switch <remote-branch-name>`.
+
+### 
