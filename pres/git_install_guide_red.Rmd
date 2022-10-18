@@ -1,0 +1,153 @@
+---
+title: "git install"
+output:
+  beamer_presentation:
+    theme: "metropolis"
+header-includes: 
+- \definecolor{fantfoxred}{HTML}{B40F20}
+- \definecolor{fantfoxorange}{HTML}{E58601}
+- \definecolor{fantfoxblue}{HTML}{46ACC8}
+- \definecolor{eastblue}{RGB}{30,129,176}
+- \definecolor{ferngreen}{RGB}{86,164,90}
+- \setbeamercolor{frametitle}{bg=fantfoxred}
+- \setbeamercolor{palette primary}{bg=fantfoxred}
+- \setbeamercolor{title separator}{fg=fantfoxblue}
+- \usetheme{metropolis}
+- \usepackage{bm}
+- \usepackage{xcolor}
+- \makeatletter
+- \beamer@ignorenonframefalse
+- \makeatother
+---
+
+---
+
+# Git Install instructions
+
++ [Download git here (v2.38.0; 64-bit version for Windows)](https://github.com/git-for-windows/git/releases/download/v2.38.0.windows.1/Git-2.38.0-64-bit.exe)
+
++ Once downloaded, right-click install, and run as administrator.
+
+  + The local install path should be `C:\Program Files\Git`:
+    + ![](assets/install_path.png)
+  
+  
+  
+---
+
+# Git Install instructions
+
+## Defaults to set
+
++ Select default components (**nothing to tick/untick here**)
+  + ![](assets/extra_git_install1.jpg){width=80%}
+
+---
+
+# Git Install instructions
+
+## Defaults to set
+
+  + Change default text editor for git
+    + ![](assets/07_git_install.png){width=60%}
+    + You can set this to your favourite text editor <smaller>(Notepad ++, Sublime, VSCode etc.)</smaller>
+    + Make sure that the selected text editor is installed to proceed.
+    + If you don't know what to choose, choose Notepad for now.
+ 
+---
+
+# Git Install instructions
+
+## Defaults to set
+
++ Override the default branch name in git to "main"
+  + ![](assets/09_git_install.png){width=80%}
+  
+---
+
+# Git Install instructions
+
+## Defaults to set
+
++ Select "Use Git from Git Bash only"
+
+  + ![](assets/03_git_install.png){width=80%}
+
+---
+
+# Git Install instructions
+
+## Defaults to set
+
++ Use bundled OpenSSH"
+
+  + ![](assets/extra_git_install2.jpg){width=80%}
+
+---
+
+# Git Install instructions
+
+## Defaults to set
+
++ Use the OpenSSL Library
+  + ![](assets/04_git_install.png){width=80%}
+
+---
+
+# Git Install instructions
+
+## Defaults to set
+
++ Checkout Windows-style, commit Unix-style line endings
+  + ![](assets/05_git_install.png){width=80%}
+
+---
+
+# Git Install instructions
+
+## Defaults to set
+
++ Use MinTTYP (the default terminal of MSYS2)
+  + ![](assets/06_git_install.jpg){width=80%}
+
+---
+
+# Git Install instructions
+
+## Defaults to set
+
++ Choose the default (fast-forward or merge) as the standard behaviour of git pull
+  + ![](assets/extra_git_install3.jpg){width=75%}
+  
+---  
+
+# Git Install instructions
+
+## Defaults to set
+
+  + Install Git Credential Manager as credential helper
+    + ![](assets/08_git_install.jpg){width=80%}
+    
+---  
+
+# Git Install instructions
+
+## Defaults to set
+
+  + Enable file system caching
+    + ![](assets/extra_git_install4.jpg){width=80%}
+
+---
+
+# Git Install instructions
+
+## Defaults to set
+
++ **Don't** enable experimental options
+  + ![](assets/extra_git_install5.jpg){width=80%}
+  
+---
+
+# {.standout}
+
+That's it!
