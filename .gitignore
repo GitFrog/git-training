@@ -1,2 +1,6 @@
 untrack/
 *html
+.Rproj.user/
+IAE_git_training.Rproj
+.Rhistory
+pres/libs
