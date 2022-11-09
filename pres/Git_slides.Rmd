@@ -365,9 +365,6 @@ git config --get core.editor
 
 ---
 
-???
-Encourage typing things out here. I think you learn more?
-
 # Time to install stuff
 
 + Run this in git bash to confirm that things installed correctly:
@@ -393,6 +390,9 @@ Encourage typing things out here. I think you learn more?
 + These commands create a folder, attempts to clone a GitHub repository and opens the repo's only file. These files/folders are then deleted.
 
 + To paste in **Git Bash**, use: *Shift+Ins*
+
+???
+Encourage typing things out here. I think you learn more?
 
 ---
 
@@ -764,6 +764,9 @@ that it merged back subsequently?
 --
 + How is this intermixed history across branches kept straight?
 
+--
++ How does git know what branch I have loaded in my workspace? 
+
 ???
 
 We will try to answer all these key questions shortly, and understanding how git handles these will hopefully make the internal architecture a bit clearer.
@@ -1014,23 +1017,31 @@ class: center, inverse
 
 # Lesson 4: Merging
 
-
-
 ---
 
 ## Git merges
 
 + Flip side of branching: **merging**
 
+--
+
 + Incorporate changes from a particular branch to another.
-  + Often, from a `feature` branch to the `main` development line, but it can be in any direction/between any two branches.
+  + Often, from a **`feature`** branch to the **`main`** development line, but it can be in any direction/between any two branches.
+  
+--
   
 + When to merge back will depend on the specific project/goal of the branch.
+
+--
 
 ### Types of merges
 + Fast-forward merge
 + 3-way merge (without conflict)
 + 3-way merge (with conflict)
+
+
+???
+There are several other strategies for more complex cases that we won't delve into here.
 
 ---
 
@@ -1049,6 +1060,14 @@ class: center, inverse
 
 ]
 
+???
+
++ All the commits that are in the `feature` branch will now be part of the history of the `main` branch.
++ All the work done prior/history therefore stays intact
++ Might also mean that `feature` branches get redundant, and can be deleted, since everything is retained in the receiving branch after a merge.
+
+
+
 --
 
 .right-column[
@@ -1061,8 +1080,7 @@ class: center, inverse
 ---
 ## Fast-Forward Merge
 
-+ If **blue** has not deviated since **green** branched off, a fast-forward merge
-is attempted
++ If **blue** has not deviated since **green** branched off, a fast-forward merge is attempted
 
 
 
@@ -1091,9 +1109,11 @@ Receiving branch: <span style = "color: blue">blue</span> | Merging branch: <spa
 
 + **blue** has received commits since **green** diverged
 
-+ 3-way merge attempted. Git checks whether changes affect the same files
++ 3-way merge attempted. Git checks whether changes affect the same files, and **_where_** these changes occur.
 
 + Since changes affect different files, no conflicts are detected
+
++ Latest version of each file from each branch are used.
 
 + **Merge commit** is created. Prompt for commit message.
 
@@ -1107,8 +1127,6 @@ Receiving branch: <span style = "color: blue">blue</span> | Merging branch: <spa
 
 ]
 
-<br>
-<br>
 .bottom[
 
 <div style = "background-color: #f0f0f0;color:black; font-size: 12px;text-align: center;">
@@ -1128,9 +1146,9 @@ Receiving branch: <span style = "color: blue">blue</span> | Merging branch: <spa
 
 + **blue** has received commits since **green** diverged
 
-+ 3-way merge attempted. Git checks whether changes affect the same files
++ 3-way merge attempted.  Git checks whether changes affect the same files, and **_where_** these changes occur.
 
-+ Changes affect the same files. Git prompts for resolution, adds conflict markers.
++ Changes affect the same files/blocks. Git prompts for resolution, adds conflict markers where necessary.
 
 + User resolves issues, deletes markers. Commits changes.
 
@@ -1143,7 +1161,6 @@ Receiving branch: <span style = "color: blue">blue</span> | Merging branch: <spa
 
 ]
 
-<br>
 .bottom[
 
 <div style = "background-color: #f0f0f0;color:black; font-size: 12px;text-align: center;">
@@ -1169,9 +1186,111 @@ Receiving branch: <span style = "color: blue">blue</span> | Merging branch: <spa
 
 + This shows where the conflict occurred. One file may have multiple markers
 
+---
+
+## The common ancestors, ours, and theirs
+
++ When git is looking for changes, it does so across the branches being merged.
+
+--
+
++ Assuming there are changes in the same file, git **does not** compare files directly, i.e. file A in branch-1 and file A in branch-2 .
+
+--
++ First, it'll look for the closest shared ancestor between these two files. Then it will:
+  + compare file A (branch-1) and the common ancestor
+  + compare file A (branch-2) and the common ancestor
+  + compare the result of the above two and **only then** decide where conflicts occur.
+
++ This is the **3-way merge**
+
+???
+Here we assume just one file being changed.
+---
+
+## A git merge heuristic
 
 
-+ **Note:** If a file has been changed in only one of the branches, then git will not consider it a conflict, and changes will be fast-forwarded. 
++ If both sides of the file have the same change in the same spot, accept either one.
+
+--
+
++ If one version introduces a change and the other leaves that region alone (i.e. no change from ancestor), introduce the change in the final.
+
+--
+
++ If both introduce changes in the same region and they don't match, mark a conflict to be resolved manually.
+
+---
+
+## A deeper look at git merge
+
++ What could we expect as the final output, if we were to merge the two branches?
+
+.center[
+![scenario1](assets/scenario1_question-min.png)
+]
+
+---
+## A deeper look at git merge
+
++ What could we expect as the final output, if we were to merge the two branches?
+
+
+.center[
+![scenario1](assets/scenario1_annotate-min.png)
+]
+
+---
+## A deeper look at git merge
+
++ What could we expect as the final output, if we were to merge the two branches?
+
+.center[
+![scenario1](assets/scenario1_resolution-min.png)
+]
+---
+
+## Here's another one
+
++ What could we expect as the final output, if we were to merge the two branches?
+
+.center[
+![scenario2](assets/scenario2_question-min.png)
+]
+---
+
+## Here's another one
+
++ What could we expect as the final output, if we were to merge the two branches?
+
+.center[
+![scenario2](assets/scenario2_resolution-min.png)
+]
+
+---
+## Why does merge behave that way?
+
++ Recall that the main point of git is to **combine changes** that may be occurring across branches.
+
++ With great commit power comes great commit responsibility:
+  + Recall that commits are meant to be official history
+  + If you're committing something, then you're telling git this is "important stuff"
+  + When merging therefore, it will try to update files, incorporating the maximal number of unambiguous changes across branches being merged. 
+  + Git "trusts" that you know what you are doing 
+  
++ **TL;DR**: If a merge is not behaving as you're expecting, recall it's a 3-way comparison with the common ancestor, and not a 2-way comparison between the files.
+  
+
+
+???
+The previous example was made to illustrate the mechanics of merging.
+
++ Think of a team of 20+ people having to start merging their changes, with files thousand of lines long.
+
++ Ideally you want a tool that won't  just "put its hands up" and identify things at the file level (hard to go through 1000+ lines of code at review)
+
++ Git "trusts" the user here. Why would you commit something if it hasn't been properly vetted.
 
 ---
 
@@ -1238,47 +1357,13 @@ class: center, inverse
    	* The Duchess
    	* The Caterpillar
    + Do a merge (should do only a merge commit.)
-5. Example 3: pseudo conflict (might expect a conflict, but it's really not - pointers get updated)
+5. Example 3: 3-way merge pseudo conflict (might expect a conflict, but it's really not - pointers get updated)
    + Merge `new-name` and `main`
-   + Why? Because updates was "1-way"; ONLY the new-name branch was really updated _in time_. Show timestamps
-6. Example 4: Real conflict
+   + Why? Because updates was "1-way"; ONLY the new-name branch was really updated since the divergence from the common ancestor.
+6. Example 4: create a new commit in main that changes the name in a few select locations (top of file, bottom of file). Try merging again. Should show multiple conflicts _where_ the names have been changed, but not in the middle. 
+7. Example 5: Real conflict
 	+ Reset main (don't explain)
 	+ Commit a few more sentences in chapter1.txt; then merge `new-name` and `main`.
-
-
-
----
-# Hooray ! You made it through Part 1!
-
-.center[![confetti](assets/confetti.gif)]
-
-
----
-
-# Hooray !
-
-## You are now a command-line user!
-
-.center[![confetti](assets/superior_meme.jpg)]
-
-???
-Let me remind you of my official position is: "Every tool has a purpose, including GUI. We cover GUI integration in this course"
-
----
-
-# Hooray !
-
-## Hopefully you're able to:
-
-+ **source control for yourself** using the command-line interface (CLI)
-
---
-
-+ **understand the basics** of how git commits work and typical local workflows
-
---
-
-+ merge changes, and **resolve simple conflicts** between your local branches
 
 ---
 
@@ -1408,6 +1493,26 @@ class: center, inverse
 
 ]
 
+???
+
+slide 118 for the git diff diagram
+
+1. Go over sections
+   + Keeping track of changes. Basically git diff as a way to zone in on differences
+   + Cursory review of working-directory, staging area, local repository, and the fact that you can diff between versions of files existing across all of them
+2. Go into example:
+   + Current state: AIW has branches `main`, `new-name`, `characters`
+   + Add a new file `chapter-3.txt`, add some content
+   	* Use `git diff` --> compare working tree with stage (should show everything green)
+   	* Stage the change, use `git diff` --> (should show everything red)
+   	* Use `git diff --staged HEAD` --> (should show the same change as before)
+   	* Commit the change
+   + Add more content to `chapter-3.txt`, as well as delete some to show changes.
+   	* Use `git diff HEAD` to compare WD and HEAD.
+   * Show a diff between two commits
+   * Show a diff between two branches
+   * Show a diff between two specific files.
+
 ---
 
 ## Git commands
@@ -1462,7 +1567,7 @@ class: center, inverse
 
 + To bring remote changes locally:
 
-  + `git fetch`: transfers from remote to your machine, but does not attemp reconciliation.
+  + `git fetch`: transfers from remote to your machine, but does not attempt reconciliation.
     + With `git fetch`, you can examine changes made by others and compare to yours (`git diff`)
   
   + `git pull`: transfer from remote AND updates your workspace.
@@ -1598,6 +1703,27 @@ class: center, inverse
 ## Something something practise remote workflows 
 
 ]
+
+???
+1. Go over Azure DevOps. Training for now; as well as IAE specific one.
+2. Start example:
+ 	+ Move the AIW repo to Azure DevOps (existing local ==> cloud) name it `salem-aiw`. Encourage others to upload theirs, create their repos
+ 		* Show `git remote -v` before and after
+ 	+ Clone from AIW to another folder.
+ 		* Show `git remote -v`
+3. Go over `An example of a workflow` section
+4. Start collab example:
+	+ Create a new git repo (`collab-example`), upload to AzureDevOps
+		* set up two bash sessions; change user name/email locally to "user1/email1", "user2/email2" respectively
+		* Go through user1 work-stage-commit-push workflow
+		* Go through user2 `fetch` workflow
+			- Show changes between `git log` and `git log -r`
+			- Merge changes
+		* Go through user2 work-stage-commit-push workflow
+		* Go through user1 `pull` workflow
+			- Show automatic merge; show conflict merge
+			- Notice how both have merge commits
+		* Go through `push` workflow from user1; pull from user2; resolved history.
 
 ---
 
@@ -1809,6 +1935,41 @@ class: center, inverse
 
 ]
 
+???
+
+1. Go over `git stash`
+2. Start an example with branch switching
+   + Create a repo `harry-potter-characters`, echo students.txt
+   	* Branch: gryffindor, hufflepuff, ravenclaw, slytherin
+   	* Add students to one of the branches:
+   		- Harry Potter, Hermione Granger, Ronald Weasley
+   		- Commit
+   	* Switch, ravenclaw:
+   		-  Luna Lovegood, Rowena Ravenclaw, Gilderoy Lockhart
+   		-  git switch back to gryffindor; conflict.
+   		-  git stash; show difference in status; difference in switch
+   		-  git stash pop somewhere else (say slytherin); re-stash; 
+   		-  move to appropriate branch. show an overwrite conflict with stash (add three new ravenclaw)
+   		-  try git stash pop; conflict. retains working dir changes. 
+   		-  git diff stash@{0} to show difference between stash changes and WD changes
+   		-  Keep stash by removing WD changes.
+   		-  Commit
+3. Go over git restore
+   + Continue with `harry-potter-characters`
+   + EXAMPLE: Restore WD from a commit.
+   	*  switch slytherin; commit a few characters, and an obvious problematic one (not committed).
+   		-  Draco Malfoy, Vincent Crabbe, Gregory Goyle, (Albus Dumbledore)
+   			+  Stress that this is easy to remove in this situation, but assume your whole morning's work is moot. You want a quick way to restore.
+   		-  git restore <filename>
+   +  EXAMPLE: Restore staged back to WD. Notice that changes still there (git status.)
+   	*  There are ways to restore a few versions back, but won't show here otherwise it can be confusing
+   	
+3. Go over git reset.
+  + Stress that this can be dangerous
+  	* Show with examples here in slytherin. Walk back a commit (think commit level, vs. file level for restore (not a hard and fast rule))
+4. Go over git revert.
+  + Same example; formal commit added to history
+
 
 ---
 ## Git commands
@@ -1936,4 +2097,46 @@ Here's an example of how our ADP architecture might look like:
 
 ![A hierarchy of ADP for IAE](assets/00_azure_devops_org.png)
 
+---
+# Hooray ! You made it through!
 
+.center[![confetti](assets/confetti.gif)]
+
+
+---
+
+# Hooray !
+
+## You are now a command-line user!
+
+.center[![confetti](assets/superior_meme.jpg)]
+
+???
+Let me remind you of my official position is: "Every tool has a purpose, including GUI. We cover GUI integration in this course"
+
+---
+
+# Hooray !
+
+## Hopefully you're able to:
+
++ **source control for yourself** using the command-line interface (CLI)
+
+--
+
++ **understand the basics** of how git commits work and typical local workflows
+
+--
+
++ merge changes, and **resolve simple conflicts** between your local branches
+
+
+--
+
++ **troubleshoot** and follow online discourse on StackOverflow/github, and the official docs
+
+--
+
++ start **collaborating** on source code.
+
+--
