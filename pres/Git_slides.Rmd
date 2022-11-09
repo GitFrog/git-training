@@ -1705,15 +1705,9 @@ class: center, inverse
 ]
 
 ???
-1. Go over sections
-	- What are remotes exactly?
-	- Working with remotes
-		+ Stress that remotes setting up is more of a one-time thing
-		+ Two use cases:
-			* Existing repo that is cloned (easiest)
-			* A local repo that is being uploaded to the cloud.
+1. Go over Azure DevOps. Training for now; as well as IAE specific one.
 2. Start example:
- 	+ Move the AIW repo to Azure DevOps (existing local ==> cloud)
+ 	+ Move the AIW repo to Azure DevOps (existing local ==> cloud) name it `salem-aiw`. Encourage others to upload theirs, create their repos
  		* Show `git remote -v` before and after
  	+ Clone from AIW to another folder.
  		* Show `git remote -v`
