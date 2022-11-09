@@ -1,9 +1,8 @@
 # Instructions
 
-1. Find at least another partner to work with.
-2. This lab is more self-directed, and the aim is for you to practise remote workflows.
-3. Create a repo named `ai-novel` and decide who is going to be setting up the remote repo.
-4. Set up the remote, and add a file called `chapter1.txt`
-5. Agree on a starting prompt with your partner, and generate some text that you'll copy to your remote repo https://app.inferkit.com/demo.
-6. Practise the `work-commit-stage-push` workflow
-7. Create a situation where you (or your partner) has to resolve a merge conflict locally.
+1. Clone the `ai-novel` repo.
+2. Create a new branch with your name: `first-name`
+3. We'll collaborate on an ai-novel as a team!
+4. Use this website to generate some ai-driven content given a prompt of your choosing (or one we decide together): https://app.inferkit.com/demo
+5. Add at least 3-4 commits to your branch
+6. We'll merge all the changes together.
